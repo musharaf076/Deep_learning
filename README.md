@@ -1,55 +1,86 @@
 # Deep Learning Experiments
 
-This repository contains three Jupyter notebooks covering introductory neural-network concepts and practical deep-learning models.
+This repository contains a collection of practical deep-learning experiments implemented using Python, NumPy, TensorFlow, and Keras. It covers fundamental neural-network concepts, computer vision, recurrent neural networks, transfer learning, explainable AI, and semantic image segmentation.
 
-## Contents
+The experiments are implemented using Jupyter Notebooks and are intended for learning, experimentation, and understanding the practical applications of deep-learning architectures.
 
-| Notebook | Description |
-|---|---|
-| `Exp 1.ipynb` | Implements a basic perceptron from scratch using NumPy and tests it on AND, OR, and NOT logic gates. |
-| `Exp2.ipynb` | Builds and evaluates fully connected neural networks for two tasks: California Housing regression and Iris multiclass classification. It uses TensorFlow/Keras, feature scaling, and Keras Tuner. |
-| `Exp3.ipynb` | Builds a convolutional neural network (CNN) with TensorFlow/Keras for image classification using the CIFAR-10 dataset. The notebook uses a subset of the dataset and normalizes image pixel values. |
+## Experiments
 
-## Requirements
+| Experiment | Description | Dataset / Application |
+|---|---|---|
+| **Exp 1 – Perceptron** | Implements a basic perceptron from scratch using NumPy and tests AND, OR, and NOT logic gates. | Logic gates |
+| **Exp 2 – Multilayer Perceptron (MLP)** | Builds fully connected neural networks for regression and multiclass classification. Includes feature scaling and hyperparameter tuning. | California Housing, Iris |
+| **Exp 3 – Convolutional Neural Network (CNN)** | Implements a CNN for image classification, including convolution, pooling, and dense layers. | CIFAR-10 |
+| **Exp 4 – Explainable AI (XAI)** | Explores model interpretability using feature-map visualization and Grad-CAM to understand CNN predictions. | COVID-19 Radiography |
+| **Exp 5 – Semantic Image Segmentation** | Implements U-Net and Attention U-Net architectures for pixel-level image segmentation and compares their performance using IoU. | Oxford-IIIT Pet |
+| **Exp 6 – Recurrent Neural Networks (RNN)** | Implements and compares SimpleRNN and GRU models for structured time-series forecasting. | Jena Climate |
+| **Exp 7 – LSTM Networks** | Applies LSTM and Bidirectional LSTM architectures to structured time-series forecasting and unstructured audio classification. | Jena Climate, Free Spoken Digit |
+| **Exp 8 – Transfer Learning and Ensemble Modeling** | Uses pretrained ResNet50 and VGG16 architectures, fine-tunes them for image classification, and combines predictions using ensemble techniques. | CIFAR-10 |
 
-The notebooks use Python and the following main libraries:
+## Technologies and Libraries
 
-- NumPy
-- pandas
-- Matplotlib
-- scikit-learn
-- TensorFlow
-- Keras Tuner (`keras-tuner`)
+The experiments primarily use:
 
-Install the packages with:
+- **Python** – Programming language
+- **NumPy** – Numerical computation
+- **Pandas** – Data manipulation and preprocessing
+- **Matplotlib** – Data visualization
+- **Scikit-learn** – Data preprocessing and model evaluation
+- **TensorFlow / Keras** – Deep-learning model development
+- **Keras Tuner** – Hyperparameter optimization
+- **TensorFlow Datasets** – Dataset loading
+- **Librosa** – Audio processing and feature extraction
+
+## Installation
+
+Install the required libraries using pip:
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn tensorflow keras-tuner
+pip install numpy pandas matplotlib scikit-learn tensorflow keras-tuner tensorflow-datasets librosa
 ```
 
-If you are running the notebooks in Jupyter, you may also need:
+For running the notebooks locally, install Jupyter:
 
 ```bash
 pip install notebook
 ```
 
-## Running the notebooks
+## Running the Notebooks
 
 1. Clone or download this repository.
-2. Open a terminal in the repository folder.
-3. Install the dependencies listed above.
+2. Navigate to the repository directory.
+3. Install the required dependencies.
 4. Start Jupyter Notebook:
 
    ```bash
    jupyter notebook
    ```
 
-5. Open the notebook you want to run and execute its cells in order.
+5. Open the required `.ipynb` file and execute the cells in sequence.
 
-**Dataset note:** `Exp2.ipynb` fetches the California Housing dataset through scikit-learn, which requires an internet connection the first time it is downloaded. `Exp3.ipynb` loads CIFAR-10 through Keras, which may also require an internet connection for the initial download.
+Alternatively, the notebooks can be uploaded and executed using [Google Colab](https://colab.research.google.com/).
+
+## Datasets
+
+The experiments use publicly available datasets, including:
+
+- California Housing Dataset
+- Iris Dataset
+- CIFAR-10
+- COVID-19 Radiography Dataset
+- Oxford-IIIT Pet Dataset
+- Jena Climate Dataset
+- Free Spoken Digit Dataset
+
+Some datasets are downloaded automatically through TensorFlow, Keras, or Scikit-learn. Others may require additional setup depending on the notebook.
 
 ## Notes
 
-- These notebooks are intended for learning and experimentation.
-- Model results can vary depending on the software versions, hardware, and training settings.
-- Run the cells from top to bottom. Some notebooks install or download dependencies/data during execution.
+- These experiments are intended for educational purposes and practical understanding of deep-learning concepts.
+- Model performance may vary depending on hardware, software versions, dataset preprocessing, and training parameters.
+- A GPU-enabled environment, such as Google Colab, is recommended for computationally intensive experiments.
+- Execute notebook cells in order to avoid dependency and variable-reference issues.
+
+## Author
+
+Developed as part of academic deep-learning practical experiments, with a focus on understanding neural-network architectures and their real-world applications.
